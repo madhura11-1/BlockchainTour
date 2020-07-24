@@ -1,0 +1,45 @@
+
+  ** What if we have so much big data like google in blockchain? so it will require so much more space if to be implemented on eveyones machine?/if it is a distrubuted system every one will have
+     to hwve the entire big data so space is increased? ( u have IPFS for that)
+  $** What is hachcash?
+  ** How does proof of stake reduces 51perecnt of attack?
+  ** what is HARDFORK?$
+  ** How to meet the requirements of GDPR (GENERAL DATA PROTECTION REGULATION ) in blockchain?
+  $** How do minors select group of transctions from pool of transctions.$
+  ** What is Benzentine agreement ot BFT(Benzentine Fault Tolerance)./ PBFT
+  $** What is base fee in ethereum.$  == 5 ethers
+  ** wHO SETs the difficulty for a block.
+  ** What is Metacoin?
+  $** what happens to the other half of block chain if the longest chain is considered? DOes the transactions in those block considered valid?$  (returned to unconfirmed poll means).
+  $** How do u set a gas price ??$
+  ** What is Patricia tree?
+  ** Ethereum scalability ?
+  ** Mining centralization in ethereum?
+  $** whta is differnece between view and constant in solidity? (it is replacemnt for view as constant can be a keyowrd for variables)$
+  ** does solidity support overloading with inheritance??
+  $** what is nothing at stake problem actually? (consider that the ether u have is the only stake and no need to deposit anything)
+      validators’s stakes would be duplicated onto both chains meaning they could potentially claim twice the amount of rewards.$         Still learn more ????????????
+  ** Learn more abt casper
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================== LERAN ===============================================================
+
+Distributed computing
+game theory
+cryptography
+
+----- Porjects ----------
+by BCDC
+1.Ecochain (renewable energy resource)
+2.recycle coin (give plasctic)
+3.Toodtrax (food related)
