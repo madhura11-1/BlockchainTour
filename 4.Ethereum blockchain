@@ -48,15 +48,15 @@ Ethereum account cointains :
                                                          2.Multiple Signature : Unlock the account once only and sign all the transaction once and then again lock them.
  
 
-Ethereum transaction contains:       Recept of transaction
+Ethereum transaction contains:       Receipt of transaction
                                      Amount of Wei
                                      Signature of sender authorizing it
                                      Message
                                      START GAS   ---    max computatinal steps the transaction is allowed.                                         
-                                     Gas price  ----    fee the sender pays per computational step                                        
+                                     Gas price   ---    fee the sender pays per computational step                                        
 
 Ethereum block contain :             Block header
-                                      trasactions
+                                     trasactions
                                      runnerup block header.
  
  
@@ -64,7 +64,7 @@ Ehtereum full node contains:
                                   Software needed for transaction initiati
                                   mining
                                   validation
-                                 block generation
+                                  block generation
                                   smart contract execution
                                   EVM
 
