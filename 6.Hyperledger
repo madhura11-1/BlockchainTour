@@ -1,0 +1,53 @@
+
+              There is no mining in hyperledger still the consensus is as strong as bitcoin or ethereum
+
+     Ledger contains : world state - the current sstate of object is gievn by it rathe than traversing the entire transaction log 
+                       blockchain - a transaction log that records all the changes that have resulted in the current the world state
+      we’re recording the facts about the current state of an object, and the facts about the history of transactions that led to the current state
+
+1. Fabric CA :
+               allows to generate cerificate fir fabric bc.
+               To do any work on fabric u need a cryptographically signed CA
+               kind of authorization required to work ur website under https protocol.
+               Ecaj user has a certificate depending on his work in the private bc
+               u can put some extra info called attributes inside this 
+               Eg : u provide username, password,then u get a certificate from fabric CA
+                    so if in ur team there is a project which has accees to only the admins so thru the certificate attributes it can be verified
+               like making the enrollment
+               then this certificate is given to the sdk where u can then interact with fabric
+
+2 Peer :
+            one or many peers
+            one peer can participate in many channels   
+            just like nodes
+
+3 Ordering Service :
+                     provide order of operations
+                     before anything is commited it muat pass thru ordering service
+                     help in making the block like sending order of transactions to include into block
+                     security, policy management,verifications are some jobs of them.
+
+4 Channels : 
+             channels are sub-networks of the fabric\
+             if there are number of parties and two of them want to do a privtae operations then they can create a channel inside fabric and nobody else can then view info 
+             inside it
+             each peer has to join the peer
+             each party inside the channel mmust agree for all other parties in the channel
+             each channel can have diff block height
+             every channel has different ledger
+
+5 ChainCode :
+               same as smart contracts in the ethereum
+               can be writte using golang,node.js, java
+               u need to create certain policy before writting it into the ledger like multi signatue or verification thru certain peers in the channel
+
+6 MSP (Memebership service protocol) :
+                 the members of a Hyperledger Fabric network enroll through a trusted Membership Service Provider (MSP).
+
+ 
+
+       Composer : same as truffle used in ethereum
+                  deploys our application
+                  sets credentials
+                  runs REST server
+                  composer playground allows interaction wiht the blockchain network
