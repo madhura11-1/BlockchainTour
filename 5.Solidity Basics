@@ -1,0 +1,336 @@
+
+Constant keyowrd for function : it tells that the function will not alter the state of contract whenever called externally.
+
+Storage and memory : 
+          Storage is a key value store of 32 bytes each for the key and the value.
+          All storage data is considered a state and used in the computation of state hash route of the header.
+          Using a memory location,cause few guess points,1-3, whereas storage costs in the order of thousands of points.
+          Twenty thousand points to set up,5,000 points to change a value and so on.
+ 
+            $calldata is somehow similar to memory, but it's only available to external functions.$
+
+Events : They help the EVM to generate the log file for that contract
+         Maximum number of parameters for an event is 3 (indexed parameters)
+         Events are inheritable members of contracts
+         mainly provides a java script call back so that it can be used in user interface.
+         events having indexed parametrs like string,array stores the keccak256 hash in log as topic coz bytes32 is max limit
+use case :         1. Mainly durinf a function call like (_function.call()) log is possible but when a sendtransaction is done like (_function.sendtransaction) log gives the value of transaction
+                      So in that case events are used
+                   2. To give dat to user interface
+                   3.Act as cheap storage as past history for a contract may be.
+
+Modifiers : they are like logic wirtting parts where logic/conditionsa are written for a particular function.
+             inheritable properties of contracts and may be overridden by derived contracts.	
+
+Payable Modifier : payable modifiera for a function declares that function to be able to receive/collect funds.Any function without paybale will not be able to receive ether unless u have a falback payable
+                   function.
+
+In fact, the SELFDESTRUCT opcode uses negative gas because the operation frees up space on the blockchain by clearing all of the contract's data.
+
+
+
+ if variables are declared public then getter are created by EVM auto.
+ 
+String : holds the UTF-8 encoding of the actual string data.So it is hard to compute and expensive also
+
+Arrays :
+      two types :
+                 Dynamic  :    Storage arrays
+                               Memory arrays
+                 Static :      Storage arrays
+                               Memory arrays
+	
+  You can resize a dynamic array in storage (i.e. an array declared at the contract level) with arrayname.length = <some new length>;. If you get the “lvalue” error, you are probably doing one of two things wrong.
+
+    You might be trying to resize an array in “memory”, or
+    You might be trying to resize a non-dynamic array.
+
+// This will not compile
+
+pragma solidity ^0.4.18;
+
+contract C {
+    int8[] dynamicStorageArray;
+    int8[5] fixedStorageArray;
+
+    function f() {
+        int8[] memory memArr;        // Case 1
+        memArr.length++;             // illegal
+
+        int8[5] storage storageArr = fixedStorageArray;   // Case 2                                                                      assert(1 wei == 1);
+        storageArr.length++;                             // illegal                                                                     assert(1 szabo == 1e12);
+                                                                                                                                        assert(1 finney == 1e15);
+        int8[] storage storageArr2 = dynamicStorageArray;                                                                               assert(1 ether == 1e18);
+        storageArr2.length++;                     // legal
+
+
+    }
+}
+
+address : holds 20 bytes of ethereum address.	
+functions under address :
+                           1.address.balance == returns the balance of that account
+                           2.address.transfer(amount) == send the amount to address
+
+
+string : it is actually an array of ints.
+         So passinf string array is not possible as it will be an array of arrays i.e. nested arrays and hence not possible till now.
+
+1.Smart contract uses solidity language.
+2.Structure of smart contract includes :
+                                        1.Data and state variables
+                                        2.Functions :   
+                                                      Constructor
+                                                      Fallback
+                                                      Pure : not to read from or modify the state meaning functions and state variables
+                                                      View :only read mainly for functions  
+                                                            view functions do not cost any any gas when called externally
+                                                             If a view function is called internally from another function in the same contract that is not a view function, it will still cost gas. This is is                                                          because the other function creates a transaction on Ethereum, and will still need to be verified from every node. So view functions are only     only                                                         free when they're called externally.                          
+
+                                                   
+                                                                                                                                   ----------------------------------- 
+
+                                                      Public : accessible all over                                    |  the default for Functions is PUBLIC and INTERNAL for storage variables.  |
+                                                      Private : only inside the contract                              |                                                                           |
+                                                      Internal : only inside and inherited contract                    --------------------------------------------------------------------------
+                                                      External : only outside the contract
+                                       3.Struct,Enum(user defined)
+                                       4.Modifiers
+                                       5.Events
+
+
+                                  ****************   Functions in solidity   **********************
+
+       function name_of_function(parameters) visibility_modifier access_modifier returns (return_parameter) {
+                   
+                        // function body    }
+
+
+      ** instead of writing return abc we can write return_parameter = abc also;                                                     Internally public variables are accessed as data where as externally
+                                                                                                                                                accessed as function.
+
+  var == It is a general type which can take value of unit ,unit8,etc
+         It cannot be passed as a parameter or it also cannot be returned	 
+
+ 
+Immutable : declares a variable immutable i.e. can be given a value at construction-time(not run time) or compile-time but only once.
+            They can only be initialized inside constructor(construction-time) or inline declaration	
+
+constant : value has to be give nduring compile time only.
+           mainly for state variables.
+
+DelegateCall : in this the calling contract calls an external contract code but executes it by taking its own address and value.
+                It is just like using others house with u as an asset or with ur things
+
+now : it is the time when theblock was added to the blockchain
+       number of seconds since the Unix Epoch that the function's transaction was recorded to the blockchain.
+
+fallback function : fallback function is executed when there is no similar function as of callrd one in smart contract or to receive ether .
+                    Only one fall bacl function is allowed in contract.
+                    no argumnets
+                    only visibility allowed is "external"
+                    max gas limit to perform operations or fallback pay is 2300
+
+static call :  Static call allows your contract to be only viewed or read by external contract preventing reectrancy attacksss      ==== Search more
+
+revert() : undo all state chnages and also return the remaining gas but first when throw was used it dint return the gas and consumed entire.
+
+assert(): bad man : burns up all the gases
+                    Mainly used as extra checks for require,if assert fails your code is a smell
+
+require() : good man : reutrns remaining ones
+
+self_destruct(owner)  : removes the code of the smart contract ,clears the storage and memory and stack and return the remiang ether to the owner.
+
+  $ Strings,arrays,bytes need to be given memory specifier separately as argumnets in a function compulsary$
+  
+  $ solidity does not allow to compare the string values so instead we can compare the keccak256 hash of the two strings to check if equal
+
+ 
+ 
+                                               ------------------- Best practice to write the function order  ------------------------------
+
+                              ^ constructor
+                              ^ fallback function
+                              ^ external
+                              ^ public
+                              ^ internal
+                              ^ private
+                              ^ constant funcitons
+
+
+ $$ /// nat spec comments  ????????????????????????????????/ 
+
+
+  in order to compare strings u can use keccak256 hashes of two strings $
+
+ uint and uint32 takes same amount of gas regardless of storage space.But there is difference when u use it in struct
+
+  struct a{
+uint
+uint32
+uint 32
+ }                              the upper one will take less gas as compared to below one
+
+ struct b{
+uint a
+uint b
+uint c}
+
+  also writring uint of smae type together takes less gas.
+  cluster identical data types together (i.e. put them next to each other in the struct) so that Solidity can minimize the required storage space. For example, a struct with fields uint c; uint32 a; uint32 b; will cost less gas than a struct with fields uint32 a; uint c; uint32 b; because the uint32 fields are clustered together.
+
+ memory arrays in functions need to initialized with some value or lenght u cannot use push opareation like dinamicalli creating storafe arrays.
+
+ Interface in solodity : 
+
+                       functions in interface  must be daclared external only
+                       Interface can not have constructor.
+                       Interface can not have state variables.
+                       Interface can have enum, structs which can be accessed using interface name dot notation.
+
+ Tokens :
+             Tokens are like interchangability of assets instead of currency.
+             ERC20 and ERC721 are some of them.
+             If u implement one of the tokens in contract code u can sell theat asset on the particular platform which sells those tokens
+
+  ERC20 are fungible meaing can be exchanged with other ERC20 token i.e. all tokens have same value.   eg. 1 dollor can be exchanged wiht another one dollar.
+  ERC721 are non-fungible tokens .Each token have a separate value.
+  
+  So basically a token is just a contract that keeps track of who owns how much of that token, and some functions so those users can transfer their tokens to other addresses.
+  This means if you build an application that is capable of interacting with one ERC20 token, it's also capable of interacting with any ERC20 token. That way more tokens can easily be added to your app in the future without needing to be custom coded. You could simply plug in the new token contract address, and boom, your app has another token it can use.
+  
+  ERC721 tokens are not interchangeable since each one is assumed to be unique, and are not divisible. You can only trade them in whole units, and each one has a unique ID
+  Note that using a standard like ERC721 has the benefit that we don't have to implement the auction or escrow logic within our contract that determines how players can trade / sell our zombies. If we conform to the spec, someone else could build an exchange platform for crypto-tradable ERC721 assets, and our ERC721 zombies would be usable on that platform. So there are clear benefits to using a token standard instead of rolling your own trading logic.
+
+ Libraries in solidity :
+           
+             library is same like a contract with difference that they have library keyword instead of contract
+             Also using keyword is used. eg using SafeMath for uint256/uint16..
+
+
+ Dapp :
+        Augur : prediction markets
+                based on wisdom of crowd principle
+                REP tokens for reporting to augur on a particular event
+                Ether for trading a particular share  of a particular event , like - if a event has 50 per chance on this option then i can buy share in exchange of ether and
+                if that particular option wins then i gain profit
+                uses ERC20
+
+
+       Grid++ : no enery retailer between and one who has grid tokens can actually sell their energy to users
+                ERC20 compliant
+                does not use ethereum but uses bolt as its coin
+
+
+
+ Web3.js :
+        
+         Ethereum bc interacts with its nodes using JSON-RPC network.So to make this interaction more easy web3.js library is been used.
+
+  1. Web3 Provider : web3 provider allows us to set our provider
+                     Setting a Web3 Provider in Web3.js tells our code which node we should be talking to handle our reads and writes. It's kind of like setting the URL of the remote web server for your
+                     API calls in a traditional web app.
+                     But this can be done easier using INFURA which makes it easy to read/write to the mainnet by having the set of nodes and just using theirs api calls
+                     Using Infura as a provider, you can reliably send and receive messages to/from the Ethereum blockchain without needing to set up and maintain your own node.
+ 
+                     Metamask is one such web3 provider which uses infura bottom the line and at the same time provides opportunity to choose ur won web3 provider which can be a full node u know
+                     There are other providers like Mist , etc
+
+
+  2. Function Calls :
+         
+         a. Call : this function is read me only that is u can only read data and cannot create a transaction on blockchain
+                   Mainly used for view and pure functions on blockchain
+         
+           contractreference.methods.methodname(parametes).call()
+   
+         b. Send : this functions writes a transaction to the database cant br used for view and pure functions
+
+           contractreference.methods.methodname(parametes).send()
+
+
+
+ Testing Dapp :
+
+    1. So in order to test our Dapp we use truffle ide mainly
+    2. Tests can be written in javascript and solidity
+    3. firstly we need to tell the tests javascript file about the artifacts of the contract so we need to load the artifacts in the file
+   
+
+      const myAwesomeContract = artifacts.require(“myAwesomeContract”);
+
+      The function returns something called a contract abstraction. In a nutshell, a contract abstraction hides the complexity of interacting with Ethereum and provides a convenient JavaScript
+       interface to our Solidity smart contract
+   
+    4. Truffle uses Javascript test environment "Mocha" for its testing
+    5. It wraps the Mocha wirh some extra features such aas the describe() function is wrsapped with contract() adding some extra feature of accounts for testing
+
+    contract() function :
+                          it takes two parameters :
+                                                    1. A string showing on which we want to test i.e. name of smart contract
+                                                    2. Second argument is the callback or promise where we will write the test with one arguemnt called "account"
+
+                          execution takes place from the callback function in contract() function by callling another function called it()
+                          This function also takes two argument    
+                                                                1.string and another is callback function with no arguments
+
+                           USE async and Wait mainly for callbacks
+
+  
+  contract.new()  : this function lets truffle deploy a new smart contract all the time . Calling it ince globally is prefered
+
+   
+   beforeEach(async() => {
+            
+         This function is usually executed before any tests are performed
+       
+    });
+
+
+   afterEach(async () => {
+
+         after all the contracs code is done we can use this to self destruct the code 
+   await contractInstance.kill();
+   });
+
+
+  context() :
+             to group tests, Truffle provides a function called context
+
+            context("with the two-step transfer scenario", async () => {
+              it("should approve and then transfer a zombie when the approved address calls transferForm", async () => {
+               // TODO: Test the two-step scenario.  The approved address calls transferFrom
+                })
+              it("should approve and then transfer a zombie when the owner calls transferForm", async () => {
+               // TODO: Test the two-step scenario.  The owner calls transferFrom
+              })
+              })
+
+                                                                                                                                  ------------------------------------------------------------
+                                                                                                                                 |   Chai is used as advanced assertion type provider library |
+                                                                                                                                  ------------------------------------------------------------
+                                                          
+  $ writing x in front of context(), it() helps truffle to skip the test $
+
+    eg : xit( "............")   -- skips this
+         xcontext("......................")  -- skips this too
+
+
+  
+                            ========================  hdwallet provider through truffle ============================
+
+
+       this provider helps in managing your trnsaction accounts on the bllockchain
+       When u use infurs type any other tool it does no manage ur acocounts so in order to do that we are using hdwallet provider
+
+       install : npm install truffle truffle-hdwallet-provider              /// do this only after u have done truffle init or else truffle wont accept that
+ 
+           
+  
+
+                          ========================= Oracles implementation   =================================
+
+
+        to use the functions that we define in oracle smart contract in our calling smart contract we need to first define an interface with all the function defination only inside the interface
+        create an object of interface and access those functions 
