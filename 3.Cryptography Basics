@@ -1,0 +1,92 @@
+Cryptography:
+
+why?
+confidentiality : data shld not br visible to others.
+integrity : it shld not be modified by others.
+Non repudation : having a proof that he/she has done it. (not having a situation where u dont have the proof afterwards when someone betrays u).
+Authentication : having a authenticated user who is sending the data.  (Nobody shld send the msgs on behaif of others.)
+
+
+encryption and decryption is done in thru keys.
+1. symmetric key cryptography == having a same key to both the users for each and every transaction.
+2. Asymmetric key cryptography == PUBLIC KEY and PRIVATE KEY
+                                  thru public key encryption is done and thru private key decryption is done.
+                                  slower than symmetric eky cryptography
+
+
+Authentication : TO give a digital signature to parent side first encryption thru parents private key and then again encryption thru childs public key then decryption thru childs private and then thru             parents public
+
+
+NODE : Full node                                          Partial Node
+ =========================================       ============================================
+       full node stores the entire blockcahin        partial nodes are light nodes where they 
+       verifies the new blocks being added           can be used for wallet purpose.
+
+
+
+Hashing : using MD/SHA 0/1/2/3 (mostly SHA2-256/512 ) is used in blockchain.  (also Kecchek-256)
+         Hashing is diferent fron cryptography in the sense that the hashed part cannot be gained back again.
+
+        ▶️ For every output “Y”, if k is chosen from a distribution with high min-entropy it is infeasible to find an input x such that H(k|x) = Y.
+           High min-entropy : choosing a number from 1 to 10^30 or more.So this has high min-entorpy.
+
+           Suppose you have an output value “Y”. If you choose a random value “k” from a wide distribution, it is infeasible to find a value X such that the hash of the concatenation of k and x will give 
+           the output Y.
+
+
+  Eg:      MD 5: It produces a 128-bit hash. Collision resistance was broken after ~2^21 hashes.
+           SHA 1: Produces a 160-bit hash. Collision resistance broke after ~2^61 hashes.
+           SHA 256: Produces a 256-bit hash. This is currently being used by Bitcoin.
+           Keccak-256: Produces a 256-bit hash and is currently used by Ethereum.
+
+Bitcoin is secured by 3,500,000 th/s (th/s == trillion per second).
+
+
+
+                                 SHA 1 === 160 bit value  
+                                 Compression function which takes H1,H2,H3,h4,h5*80 mixes with 512 bit message (only 512 is allowed) and produces new h1,h2,h3,h4,h5
+                                 each h1,h2..  having 32 bits of value.  where h0,h1,h2,h3,h4 are initialized with constants defined by standard.
+                                            if greater than 512 process is repeated with newly produced h1,h2,h3,h4,h5.
+                                            if not a multiple of 256 then padding is done with last bits as the length of message i.e msg + 10000.......lenth of msg
+                                 SHA 256 === 256 bit value
+
+          
+
+                             Simple Hash                                          Merkel Tree Hash
+                  Used for fixed entity                                           Used for varying entities
+                  eg: Block header                                               eg. transaction,state hash.
+   
+    
+    ▶️ Digital signatures - content is digitally signed with an individual’s private key and is verified by the individual’s public key
+                             
+                             1.Authentication – since the individual’s unique private key was used to apply the signature, recipients can be confident that the individual was the one to actually apply the 
+                                              signature.
+                             2.Non-repudiation – since the individual is the only one with access to the private key used to apply the signature, he/she cannot later claim that it wasn’t him/her who 
+                                                applied the signature
+                             3.Integrity - when the signature is verified, it checks that the contents of the document or message match what was in there when the signature was applied. Even the slightest 
+                                         change to the original document would cause this check to fail.
+
+
+
+    ▶️ Encryption - content is encrypted using an individual’s public key and can only be decrypted with the individual’s private key
+                     
+                      1.Confidentiality - because the content is encrypted with an individual’s public key, it can only be decrypted with the individual’s private key, ensuring only the intended recipient 
+                                        can decrypt and view the contents/li>
+                      2.Integrity - part of the decryption process involves verifying that the contents of the original encrypted message and the new decrypted match, so even the slightest change to the 
+                                    original content would cause the decryption process to fail
+
+   Digital certificates are provided by Certificate AUthorities to store the public key especially and protect user transactions.
+   Eg : wen browsera also use these certificates to protect their website through popular CAs.
+   The SSL/TSL cryptographic protocols - establishing encrypted links between websites and browsers also makes use of asymmetric encryption / digital certificate.
+
+                                           
+                                                        CRYPTOGRAPHY ALGORITHMS:
+ 
+   1.RSA : used in SSL/TSL protocals which is used in browser to website security etc.	Size : 1024 to 2048 bits.
+           multiplyying two large prime numbers and generating factors of the multiplied number.
+   2.ECC : used recenlty.	
+           Ellptical curve equation is used.
+           Key size is less than RSA.
+           Equivalent security with lower computing power.
+
+
