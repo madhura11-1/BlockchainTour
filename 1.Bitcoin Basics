@@ -1,0 +1,387 @@
+Blockchian- Distributed,No third party involved,fast,cost effective
+            The whole idea is to eleminate the middle man. 
+           Open to make a transaction or update it is published in the network
+           Transction validation is carried out indeoendently by all mminors.
+           Blockchain ledger should always allow users to store the succinet cryptographic string so that they refrain from downloading the entire bc in pc.
+           This string shld change when there is change in theoriginal ledger.
+           1 BTC = 10^8 satoshi.
+           Each block has 419 transactions each
+           Wait for 6 confirmations always once a transaction is got in chain ti prevent double spending.
+
+           I] Validation
+           II] Verification
+           III] Consensus
+           iV] Immutable recording
+
+egg of bc : ethereum,ripple ,NXT(limited smart contract codes , cannot code ur own smart contract),monero,bitcoin cash,etc.
+
+    Through put ===  Maxmimum number of write operations that  can be performed on blokchain at given time.
+    Legacy      ===  when heard abt new transaction how long does it take to write the transaction to the network (10 min)	
+
+    Block:
+
+    Magic No
+    Block Size
+    Block Header
+    Transaction counter
+    Transactions
+                                                  ▶️ header of every block contains a hash of header of the previous block
+                                                  ▶️ The block header hash is calculated by running the block header through the SHA256 algorithm twice.
+                                                  ▶️ hashcash algorithm or function requires the following parameters: a service string, a nonce, and a counter. In bitcoin the service string is encoded in the block header data structure, and includes a version field, the hash of the previous block, the root hash of the merkle tree of all transactions in the block, the current time, and the difficulty.
+
+
+   Block Header:
+
+    Version         == 4 bytes
+    hashPrevBlock   == 32 bytes
+    hashMerkleRoot  == 32 bytes
+    Timestamp       == 4 bytes    == in UNIX (since January 1970 according ti bitcoin time)
+    Difficulty      == 4 bytes    == exponent and mantissa value i.e. 3 bytes mantissa and 1 byte exponent. If the target difficulty is less it becomes more hard to find or comput the value less than that.
+                                         
+
+                                                           New Difficulty = Old Difficulty * (Actual Time of Last 2016 Blocks / 20160 minutes)
+                                       range increases and so u acn easily compute.
+                                         
+    Nonce           == 4 bytes    ==  the nonce has been appended by the extra nonce function which sits in the coinbase transaction – or the first transaction of the Merkle root signifying who to pay the 
+                                      block reward to – an extra counter to add permutations to as the nonce number can be used well within a second by modern mining equipment
+      
+                                                  Ways to create new coin.
+
+                  🤑️  Create totally new blockchain to represent a coin.                (Namecoin ,Ethereum)
+                  🤑️  Create a scrpit on original bitcoin to convert to some other coin (Colored coins).
+                  🤑️  Create something called meta-protocol on top of bitcon            (Metacoin )                                   ### learn more.
+
+
+                        ---------------------  The Main use of blockchain is having the original value instead of copy ??  ---------------------(email sends copy)
+
+
+Minors : Minors are individual nodes in blockchain. Not all nodes are minors.They do the role of validation of transfer to add in ledgure.first one to add wins reward.Key is being searched by minor to add in ledsure.Minors then publish a key to all other nodes and they add it.
+Transaction zero, index zero of the confirmed block is created by the miner of the block.
+It has a special UTXO and does not have any input UTXO.
+It is called the coinbase transaction
+that generates a minor's fees for the block creation.
+Currently, the minor reward is 12.5 BTC for a bitcoin.   (the minor rewards decreases bcoz there has to be only 21 mmn coins in circulation.)
+This is how new coin is maintained in bitcoin.
+The coin base transaction (transaction initiated by minor of block to collect his fee) does not have to used as UTXO input until 100 blocks are added further to ensure that 
+
+                                                        -------------------------------------------------------------------------------
+                                                        |      After every 2016th block the difficulty for mining a block changes.    |   
+                                                        |         the difficulty is same as 256 bit hash with zeros at start          |                                                     
+                                                        -------------------------------------------------------------------------------
+
+
+
+Banking :                          CyberSecurity:                                         Supply Chain Management:  Fair chain status of products can be verified
+ startup :ABRA                                                                                                   Industries : Fluent , Skuchain , Blockverify, Provinence .org
+ cpmpanies : BARCLAYS   
+
+Forecasting :                      IOT and Networking:                                    Insurance:  Managing trust imp                       Private transport :  owner and client connection 
+                                                      Industries : Samsung,IBM                    Industries: aeternity                        and Ride sharing
+                                    Let devices interact with one another and verify       smart contracts                                                        Industries : arcadr city,Lazooz
+
+
+E-Wallets : pay automatically       Online Data Storage:                                   Charity :                                          Voting : voter regisration,verify                             
+  Industrieds: UBS, Innogy, ZF           Industires : Storj.IO                                Industires: BitGive                                voter,counting,no false votes are added,removed 
+                                                                                                                                                Industries: Democracy.Earth , followmyvote
+
+Government:                              INCOME: making universal                           Healthcare:want data to be able to share to           Energy Management:transfer energy from peertopeer   
+ when a bridege falls we can              industry: CIRCLE                                   all the hospitals whereever we go .                  without any center.
+change the files of officer                                                                 the medicines which we buy r correct or not           Industires: Transactivegrid(Ehtereum).
+name.so making it decentralized                                                                    
+   industries: GOVCOIN                                                                        industries: tierion,GEM                                                                             
+                                                                                                                                            
+
+
+ONlinesales:                         others:  Online music,Real Estate
+transfer form byer to seller                   FOodTRAx-app that tracks food from producer to concumer.ensuring whether came naturally or artificial
+  industires: Open bazar,OB1                   Plastc Bank : exchange of plastic
+                                               REcycle to coin: recycling using blockchain.       
+                                               Ecofriendly product tracing system for users/carbon emission tracing
+                                               Crowd funding
+
+
+                                                ♥️ Different types of coins ♥️
+
+▶️ Colored Coins : Marking each colored coin with each task.
+                With the bitcoin only transactions can be done.But bitcoin can be converted to colored coin to do any other transfer.
+Eg : Consider a red coin being given to car 1.This coin has its wallet to be set.If the coin is wiht one node and when transferd to other that coin will be given to that person.
+       So all the record of that coin will be visible due to its color.Tracing will be easier due to this.
+
+▶️ NameCoins : Namecoins are decentralized DNS.
+            This allows safety,security,immutability of websites.
+            No one can hack it aas data is secured.
+            eg : www.madhura.bit
+
+▶️ Dogecoins :  They require very low time to mine alomost a minute.
+                 their price is usualiiy very low and so can be used to give a tip online just like a like on instagram.
+                 There is no restriction on creation of coins in dogecoin as mining increases so does the coind go on increasing.
+
+▶️ Litecoin :  Is same as bitcoin wiht low market value and high transfer time.
+                its capacity is about 84 million coins which is 4 times more than bitcoin.
+                 Faster than bitcoin with 2.5 minutes creation time.
+
+DAO :   forming a set of rules to work for a particular task by grp of people.
+        Doing everyrhing by code no need for humans but in a decentralized way. 
+
+
+
+==================================HARD FORK:========================================
+    making some changes in originl protocols of blockchain coin and them creating your own way.(divided into original and new) 
+   In hard fork two different cash are created 
+   Eg. : Bitcoin cash a hard fork originated from bitcoin blockchain.
+
+  Not every time during A FORK A New coin is generated in haed fork.
+ Eg Ethreum.
+
+=================== SOFT FORK  ============================================
+  the bc is not divided but there is backward compatibility maintained in bc.
+ no two bitcoins are developed . Only one cash prevails with both versions suited.
+the old nodes will continue to see new blocks as valid still
+  
+ Eg : P2SH --- feature of adding  multiple signature address in bc.
+      BIP-66  --- signature validation improved. 
+                                                                                                                                                 
+
+
+
+==========================================PROOF OF WORK:   =========================================================                             |  IOTAS Tangle,Cordano {reducing problem scalability} | 			                                                                                                                                                                  
+  Validiate each block before putting in blockcahin  (10 min for each block so 10*n total coz of hash value changing)                            
+  Each user in the blok has the blockchain.                                                                                                      |                                                    |
+  Consensus Algorithm is used to add in the  block.                                                                                              |   IPFS - for distributed file/internet {Filecoin}  |
+  everybody uses their power here so lot of it is lost.                                                                                          ======================================================
+
+======================================= PROOF OF STAKE =================================================
+
+   The people have to invest some stake into bc.
+   the one who invests more becomes a validator/minor.
+   Ofcoures this favours rich but it is good as limited amount of power is being used.
+   aLSO ifsomeone invests his stakes and approves wrong transaction and bc becomes aware of it his stake is burnt.
+
+
+==================================== CLOSED CONSENSUS =====================================================
+
+               <<<<<<<<<<<<  Dont know if it is actually available. >>>>>>>>>>>>>>>>>>>>>>> ????????
+
+
+                                            ==========================  why the block creation interval is long enough of 10 min ====================
+ 
+                   This is kept so as the entire network would be able to hear about the newly created block and to avoid forks beacuse if the interval is kept low it would cause greater 
+                   number of forks to occur as network would have very less time to accept nodes in their pc.  
+
+
+
+
+
+                                                         Mainthing to note:The question is about public accessibility of blockchain data and the personal privacy of 
+                                                                  the very same data. It is a key debate in cryptocurrency and ultimately in blockchain.
+
+
+Dapp : Ethereum as is a server like thing for blockchain so it also supports dapps.
+Ether = acts as an oil to work or deploy our task on ethereum
+Ehtetrum address = 20 bytes i.e. 40 digits with 0x starting(excluded)   ===== Keccak256=====
+
+
+
+
+                                             ========================================= SMART CONTRACT===================================================
+                 they are usually applications or codes or programmes wrirtten in solidity,Mutan,Serpant,LLL,( vyper language soon) for running on EVM machine and deploying on ethreum.
+                 they help the middle man to get eleminated from the procedure and ensures that money is being transferred only after requirements are met until then it stays with blockchain.
+
+
+                                                                🔴️   DrawBacks ::    🔴️
+
+
+              1.slow in terms of transactions  (atm replacement is difficult)
+              2. Huge waste of resources (computational power)
+              4. Privacy
+              5.51 percent attack on bc.    
+              6. Value blindness         (u do not have a fix value for each task like in ethereum , in bitcoin value differs as per market and need to calculate for each task)
+              7. Blockchain blindness.   (u shld be able to use bc for any purpose of urs like ethereum)
+
+
+
+ **  The slow transaction per second issue in bc can be remioved using lightining bitcoin.
+     In this , a wallet address is provided to both parties and some cash needs to be deposited over there.and then any transaction will remove or add in that wallet so this issue is solved.
+
+     
+           =========================================
+          | Hashing functions - bcrypt,scrypt,argon2 | ----  Encryption(bcrypt[salt+cost](hash(password)))
+
+
+
+
+                  ============================== Zero Knowledge proof ==================================
+                           it is a rule mostly used to compensate proof or work/stake.proving whether
+                           particular thing is trueor not witout actually revealing it.
+                              eg. 10 lies between 0 and 100.
+
+                         
+
+
+
+      UTXO-unspent Transaction output : this is basically the output earned after every transaction.
+                                          give 3rs but if u have 5rs uhave to give all five and then u get 2rs back . so 2rs are utxo            
+                                        In this way almost all the account balance u have are utxo.
+      UTXO ensures there is no double spending and whether each transction is valid or not.
+                                        
+                               =====    
+                  ==================   amount input = amount output.
+                               =====
+
+       HASHCASH   :  Solving a puzzle to get money or transfer money. Hashcash was treated as currency but later evolved as proof of work technique.
+
+                                ================  Transaction validation ======================
+    
+          1. First all the transaction that are verified are added to transaction pool of respective miner 	and no rewaed for this.
+          2. Then these verified transactions are added to block and block verifivation is done and total reward = miner reward + transaction fee
+          3. Transactions are added to block accorging to priority.
+          4. Priority is as follows:
+                                          The priority of a transaction is calculated as the sum of the value and age of the inputs divided by the total size of the transaction:
+
+                                                              Priority = Sum (Value of input * Input Age) / Transaction Size
+
+	
+                                          In this equation, the value of an input is measured in the base unit, satoshis (1/100m of a bitcoin). The age of a UTXO is the number of blocks that have elapsed since the UTXO was recorded on the blockchain, measuring how many blocks “deep” into the blockchain it is. The size of the transaction is measured in bytes.
+                                          high priority,” its priority must be greater than 57,600,000
+
+                       
+
+
+                                                             ---------------  Transaction Integrity --------------------------
+
+    1. Authorized signature
+    2.unique address
+    3.Verification done shld not be modified.
+
+   256 bit random number (private key ) -> ECC applied to privtae key to get public key -> hashing is applied on public key (160 bits) to generate the address.
+   Encrytion on message is done to provide security.
+   🏪️ Public key is stored using digital certificate as it needs to accessed by all.
+
+   In Ethereum BLock chain the double spending is solved by using a global nonce+account number.After each transaction the nonce is incremented.
+   In ethereum a transaction does not have a timestamp it has nonce value wiht account number. Instead a block has a timestamp when it was collected.
+
+  
+  Two types of nonce
+  1. Account Nonce : incremented whenever an account generates a transaction in it.
+  2. Proof of Work nonce : account address + nonce <= difficulty limit.
+
+
+
+  Types of blockchain :
+                        1. Public
+                        2.private : read write in bc is private and restricted to users.
+                        3.Consertium : Fixed set of minors to deal with transactions.But read and write access to all.(minig will only be done by this fixed set of people.)
+                                       If 15 miners then atleast 10 should approve the block.
+
+  Bitcoin Wallet :
+                  In order to distribute your money nad not allow it to go into one single wallet a user can create many wallets and ask others to transfer btc to different wallets inorder to hide       his total money.
+
+ Types of Chains :
+                 1.Main Chain : most difficulty level and highest height(probably).
+                 2.Secondary chain : may have hight more but difficulty is porbaly less.
+                 4.Orphan : which has no parent mostly. Eg. if parent and child are mined wiht less time difference
+
+
+              ====================== Token burning ===========================
+
+ 1. removing the entire supply/some from the blockchain of that particular token
+ 2. the tokens are put into irretrivable wallet
+ 
+ why to burn tokens :
+ 1. incentivize the people after the ICO i.e. if u burn some tokens that are not been sold after ICO then the supply decreaes ,demand inc and value inc so burning is done    
+    somtimes
+ 2. burning to correct the errors\
+ 3. it is similar to the smart contract transfer transaction where the to address is eater address or address[0]
+ 3. to buy back shares from their share holders
+ 4. burns some percent of transactions from transaction fees without allowing malicious users to spam.Daniel of service attack avoid krne ke liye.
+ 5 to create more nice consensus mechanism :
+                                            proof of burn :
+                                                           allow only some minors to let allow consensus thus reducing power
+
+  🔴️ Scalability :
+          Lightning network is one of the ways how we can solve the saclability issues in bc
+          here the daily ot most often transactions between same person can be made oofline
+          and then after the agreement is over we can transfer close tge channel and record that entire bunch to ledger
+          a payment channel is made between the two and some stakes have to put by both
+          and offline transactions are recorded between the two and the agreement has to be signed by both
+          so whenever ine wants to withdraw they can and then funds are released back 
+       
+  🔴️ Privacy :
+        As bitcoin and ethereum are public meaning not only anyone can join but at the same time anyome can view everything
+        So Zcash bc uses encryption to avoid this at the same time uses proof or work is carried by ZERO knowledge proof
+        where u dont know anything but can actually know it without knowing iit
+
+  🔴️ IPFS :
+       decentralized distributing platform
+       hashes the data and instad of finding it by location finds if by hash and askes in the network if any node has it
+       uses Merkel DAG(distributed acyclic graph) to store the connection between ownership of files or transfer of files
+       it uses content addressing instead of location address
+
+      IPFS object generally has Data field and Links
+      Data Field : has data that is less than 256kb
+      link :
+            Name : nama if the link
+            Hash — the hash of the linked IPFS object.
+            Size — the cumulative size of the linked IPFS object, including following its links.
+      File name is not the part of IPFS object.So files with different names nad same content will have same hash or represent same object
+      In IPFS we only store the hash of tha data and not hte actual data
+      IPFS can also perform as a version controlled system
+      where previous hash can be stores as parent0,parent1
+      IPFS can work even without internet meaning that it is possible to share files even thru lan
+
+  🔴️ HashGraph : 
+        To reduce the power consumption in POW and to make the latency of transactions high Hashgraph is one way we can reduce
+        Also there is no order in bitcoin in collectiong the transacrions from the pool and to order that is one of the aim og HashGraph consensus
+
+
+  🔴️ Bitswap in IPFS :
+       this is thw main protocol beind transfer of files in IPFs
+       the nodes have a want list and a have list of the CIDs
+       so the nodes publish their want-list to the network through the gossip protocol and then bitswap checks for the required file
+       if found the file is gievn and if not found then the Bitswap checks it for in the Distributed Hash Table if still not found not found is returned
+
+       Bitswap has two main jobs:
+
+    Acquire blocks requested by the client from the network.
+    Send blocks in its possession to other peers who want them.
+
+  
+
+   ▶️ BIP protocols :
+  
+        From a seed phrase u can derive a master key and from that u can derive a local keys for ur different address
+        master key is not used to retrive anything
+        
+        Even though these are introduced by bitcoin but are supported by multiple coins.So using the same seed u can store differnt coin types.
+        HD wallets are nothing but a hierarchical tree staring from the root node.
+        we use bip44 as using a same standard which is agrees upon by different cryptocurrecies would allow them to interact with each other thats y a standard is created
+
+        m/44/60/0/0/0
+ 
+        44 - bip44 which is a node after 43 and this is one of the hierarchy used to provide wallets
+        60 - basically is coin type so for ethereum its 60 and for bitcoin its 0 (m44/0/0/0)
+        0  - the next is wallets as u can have many wallets under one coin type so it is the index of the wallet also called as the account
+        0  - the next is chain i.e. internal or external
+             it is 0 when it is external which is to create new public address under same wallet
+             it is 1 when it is internal which is to change the account within the smae wallet.
+        0  - the next is the index of address as there can be multiple address under one wallet.
+
+        BIP32 : this is used to create a hierarchical wallet .It is a general fomrat for HD wallets (Hierarchical deterministic wallets)
+                This document describes hierarchical determinstic wallets (or "HD Wallets"): wallets which can be shared partially or entirely with different systems, each with or without the ability
+                to spend coins.
+                BIP32 generates a seed.
+        BIP44 : specific implementation of BIP32 that defines coin type and support for multiple acounts
+        BIP39 : This BIP describes the implementation of a mnemonic code or mnemonic sentence -- a group of easy to remember words -- for the generation of deterministic wallets.
+
+
+      1. BIP32 generates a seed and BIP44,39 generates a phrase that  can be converted to seed to provide a HD wallet to us. This could be done so as to remember that quicly.
+      2. The seed is 512 bits.So this the only one that is used to genearet BIP32 HD wallet.
+      3. So u ofcourse need a convertor to convert your seed BIP39,44 into Master key BIP32 as master key supporst BIP32.   
+      4. Different wallets generates different key phrases it may be 12 or 24 so it has one base that is BIP32 so we have to convert them.    
+
+                                                
+
+                                                  
+
+
+
