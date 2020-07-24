@@ -1,0 +1,17 @@
+       
+                                                                     = ====== From Bitcoin's Academic Pedigree =============
+                                                      The concept of cryptocurrencies is built from forgotten ideas in research literature.
+                                                                                 Arvind Narayanan and Jeremy Clark
+
+  1. Ledger idea was borrowed from  Stuart Haber and Scott Stornetta written between 1990 and 1997(with Dave Bayer in one paper in 1991).They wanted esrablish digital notary system.
+     Timestamp,sign of creator,previous document creator sign (hash).
+     Next paper = hash used , same timpstamp same block , Merkel tree se link all the paper in one block.
+  2. Byzentine Fault Tolerance (Hard forks in bc ) and nodes leaving and rejoining the network were also the problems stated before.
+  3. This promblem of BFT or an other spam was solved in 1992 by Cynthia Dwork and Moni Naor.15 Their goal was to deter spam. Note that spam, Sybil attacks, and denial of service are all roughly similar problems in which the adversary amplifies its influence in the network compared to regular users; proof of work is applicable as a defense against all three. In Dwork and Naor's design, email recipients would process only those emails that were accompanied by proof that the sender had performed a moderate amount of computational work—hence, "proof of work." Computing the proof would take perhaps a few seconds on a regular computer. Thus, it would pose no difficulty for regular users, but a spammer wishing to send a million emails would require several weeks, using equivalent hardware. 
+    The recipient shld be able to verify the answer easily (such shld be the design of puzzle) i.e computational burden on recipient shlould be less.
+  4. Adam Cack then proposed hashcahs system working on hashes.Hashcash was viewed as a cash i.e solve puzzle to get cash from bank.But it has no protection against double-spending.So cannot be used from
+     peer to peer.
+  5 B-money and  bit-gold had implemented all things except the proof of work in bitcoin instead they used the idea to let the majority decide if there any disagreements.(implemeted proof of work as a 
+    hashcash by Adam BLACK.
+  6. Chaum Father of digital cash first porpsed thr idea of public key as identifier to the person.
+  7. Nick Szabo proposed smart contracts.
