@@ -323,14 +323,22 @@ Uncles in Ethereum :
 
          ************* Web3.js ***********************
 
-   It is a library that helps nodes to interact with entire blockchain by commands.
+   It is a library that help nodes to interact with entire blockchain by javascript functions.
+   Connecting to ethereum node provider, interaction with blockchain ,providing account address from provider are some of the functions of web3.js
 
+  OR u can use command line interface to do so
+
+  what is geth????
+  Geth is a command line interface written in go language that allows you to run and operate a full ethereum node
+  You can deploy smart contract,transfer funds, mine blocks, generate ethers, check block history,create accounts
+  It is used to also create your own private network and connect to public mainnet.
+  You can fully test your appliaction before deploying to mainnet	 
 
   commands for ethereum blockchain ::
        sudo apt-get install software-properties-common
        sudo add-apt-repository -y ppa:ethereum/ethereum
        sudo apt-get update
-       sudo apt-get install ethereum
+       sudo apt install ethereum
 
 
                                                       $$$$$$$$$$$$$$$$$$$    DAPPs    $$$$$$$$$$$$$$$$$$$$$$$
@@ -372,9 +380,17 @@ PBFT (Practical byzentine fault tolerance) :
                            Step3 : prepared block is then commited to the chain.So they shld have 2f+1 commit msggs
                            mainly used in hyperledger
 
- 
+
+  
+                                                ===============  PRIVATE ETHEREUM BLOCKCHAIN ===============
 
 
+            1. As ethereum is public and transparent private firms cannot manage their transactions on ethereum
+            2. So this concept of private Ethereum came into picture where POA concept is used
+            3. POA is basically where some nodes are given authority to validate blocks and they can control censorship in bc
+            4. So private blockchain is maily used by banks and some private frims
+            5. In this u have to connect your on peers to the network and coninue choose validators
+            6. Here other nodes keep a watch on validaters so that they do not tend to include any malicious block into the blokchain and validators keep watch on each others also
 
    
    
