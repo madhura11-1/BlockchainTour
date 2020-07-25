@@ -158,6 +158,15 @@ the old nodes will continue to see new blocks as valid still
    aLSO ifsomeone invests his stakes and approves wrong transaction and bc becomes aware of it his stake is burnt.
 
 
+ ==================================== PROOF OF AUTHORITY ==============================================
+
+   Instead of miners where they keep on computing to create a block a specific grp is assigned those credentials
+   The new block can be accepted directly without verification, or by unanimous vote of the block generators, or simply by a majority, depending on the configuration chosen for the Blockchain.
+   Requires almost no computing power
+   Also the network can adopt to increase the time betwen each block creation and process more transacions
+  Also the blockchain with POA can work even without crypto currency
+   But choosing only some people makes it a bit centralized and POA is usually choosen by private banks and frims 
+
 ==================================== CLOSED CONSENSUS =====================================================
 
                <<<<<<<<<<<<  Dont know if it is actually available. >>>>>>>>>>>>>>>>>>>>>>> ????????
