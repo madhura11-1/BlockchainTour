@@ -356,11 +356,19 @@ Uncles in Ethereum :
    to see nodes connected to network : 	admin.peers()
 
    Truffle : IDE for complete testing,deploying dapp on test network n all
-             migrants.js : help for deplyment of our contract
+             migrations.js : help for deplyment of our contract
                            keeps track of changes
              test.js : contains both solidity and js test enviromnent
-             truffle.js : contains port number nall
-
+             truffle.js/truffle-config.js : We can define different development environments like testrpc,our own local host,etc which tells truffle where we r connecting our contract.
+             bs-config.js : this is configuration file for lite server.It allows u to override the default lite server config.(bc - browsersync as lite is built uopn bs server)
+             package.json : it is also used for  defining project properties, description, author & license information, scripts,  apart from dependencies
+                            records the minimum version you app needs. If you update the versions of a particular package, the change is not going to be reflected here.
+                            Created when u run npm init.
+             package-lock.json : Records the exact version of each installed package which allows you to re-install them. Future installs will be able to build an identical dependency tree.
+                                 Not compulsary to be in a project .
+                                 This is soley used to lock dependencies to a specific version number.
+             lite-server in npm : Lightweight development only node server that serves a web app, opens it in the browser, refreshes when html or javascript change, injects CSS changes using sockets, and
+                                   has a fallback page when a route is not found.
 
  Ethereum metropolis : proof of work but is not energy based instead its memory based
  ethereum constantinople : thinking to switch to proof of stake
@@ -371,7 +379,7 @@ Uncles in Ethereum :
                            one drawback is when u have nothing at stake so alternative is casper protocol
                            so if u have 3% of bitcoin or altcoin then u can mine 3% of blocks
                            so inorder to do 51% attack u need 51% of altcoin on POS
-             Casper :   one u have made a block prepared with 2/3 of minors or validators putting in stake and its validated from among one then it has to be bet upon by 
+             Casper :   once u have made a block prepared with 2/3 of minors or validators putting in stake and its validated from among one then it has to be bet upon by 
                         2/3 of validators and block gets accepted
                        
 
