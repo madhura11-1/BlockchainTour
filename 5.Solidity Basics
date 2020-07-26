@@ -332,5 +332,5 @@ uint c}
                           ========================= Oracles implementation   =================================
 
 
-        to use the functions that we define in oracle smart contract in our calling smart contract we need to first define an interface with all the function defination only inside the interface
+        to use the functions that we define in oracle smart contract in our own calling smart contract we need to first create an interface with all the function declaration only inside the interface
         create an object of interface and access those functions 
