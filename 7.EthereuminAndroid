@@ -4,4 +4,11 @@
 
   1. Web3j is one of the library that helps in building Android Dapps
   2. It hepls in interacting with the blockchain at the same time provide wallet support.
-  3. Also has feature for accessing the private wallet file from ur phone memory
+  3. Also has feature for accessing the private wallet file from ur phone memory or can enter public privaye key or with help of the mnemonic
+  4. Web3j is the java version of Web3 and has all the features provided by web3.
+  5. Creation of smart contract wrapper to intereact with smart contract, access the account info and many more.
+  
+  To use Web3j :
+  
+  Add web3j to the depedencies as given in the documentation and u r good to go.
+  For smart contract interaction you need the abi which is generated when you compile the smart contract.
