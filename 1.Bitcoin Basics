@@ -372,9 +372,12 @@ Ehtetrum address = 20 bytes i.e. 40 digits with 0x starting(excluded)   ===== Ke
         60 - basically is coin type so for ethereum its 60 and for bitcoin its 0 (m44/0/0/0)
         0  - the next is wallets as u can have many wallets under one coin type so it is the index of the wallet also called as the account
         0  - the next is chain i.e. internal or external
-             it is 0 when it is external which is to create new public address under same wallet
-             it is 1 when it is internal which is to change the account within the smae wallet.
+             it is 0 when it is external chain
+             it is 1 when it is internal chain
         0  - the next is the index of address as there can be multiple address under one wallet.
+
+    Internal and external chain :
+       External chain is used for addresses that are meant to be visible outside of the wallet (e.g. for receiving payments). Internal chain is used for addresses which are not meant to be visible outside of the wallet and is used for return transaction change. Public derivation is used at this level
 
         BIP32 : this is used to create a hierarchical wallet .It is a general fomrat for HD wallets (Hierarchical deterministic wallets)
                 This document describes hierarchical determinstic wallets (or "HD Wallets"): wallets which can be shared partially or entirely with different systems, each with or without the ability
