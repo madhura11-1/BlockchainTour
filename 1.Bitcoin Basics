@@ -366,6 +366,7 @@ Ehtetrum address = 20 bytes i.e. 40 digits with 0x starting(excluded)   ===== Ke
         we use bip44 as using a same standard which is agrees upon by different cryptocurrecies would allow them to interact with each other thats y a standard is created
 
         m/44/60/0/0/0
+        This path is used by Trezor, MetaMask, Digital Bitbox, Jaxx, and Exodus, MEWconnect.
  
         44 - bip44 which is a node after 43 and this is one of the hierarchy used to provide wallets
         60 - basically is coin type so for ethereum its 60 and for bitcoin its 0 (m44/0/0/0)
