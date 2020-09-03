@@ -401,7 +401,7 @@ PBFT (Practical byzentine fault tolerance) :
             2. So this concept of private Ethereum came into picture where POA concept is used
             3. POA is basically where some nodes are given authority to validate blocks and they can control censorship in bc
             4. So private blockchain is maily used by banks and some private frims
-            5. In this u have to connect your on peers to the network and coninue choose validators
+            5. In this u have to connect your on peers to the network and continue choose validators
             6. Here other nodes keep a watch on validaters so that they do not tend to include any malicious block into the blokchain and validators keep watch on each others also
 
    
