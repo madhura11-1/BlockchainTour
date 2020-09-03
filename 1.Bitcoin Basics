@@ -157,6 +157,17 @@ the old nodes will continue to see new blocks as valid still
    Ofcoures this favours rich but it is good as limited amount of power is being used.
    aLSO ifsomeone invests his stakes and approves wrong transaction and bc becomes aware of it his stake is burnt.
 
+  Two Types :
+  
+  1. LPOS (Leased Proof of Stake):  
+     Usual POS only those having more stake are favoured all time
+     So nodes who have less stake are unable to participate and again then only limited people have control over blockchain
+     To avoid this the holders can lease their crypto to other nodes who can mine and any reward is shared among them.
+     the Leaser has the right to take back anytime he wants.
+
+ 2.  DPOS (Delegated Proof of Stake)
+     Here a voting system is used where holders vote for validators.
+     Voting requires putting some balance in it. 
 
  ==================================== PROOF OF AUTHORITY ==============================================
 
