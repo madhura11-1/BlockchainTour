@@ -18,6 +18,8 @@
 10. Every miner gets a reward of 5 ethers.
 11. There is no limit on number of ethers produced.
 12. Every ethereum block does not hold fix number of transaction	
+13. The Public private key cryptography is used where in the public key is derived from the ECA (Elliptical Curve Algorithm) and then public key is hashed(Keccak256 hashing) and last 20 bytes are taken as address of account.But mostly internally public key is used by Ethereum algorithm.
+
 
 Keystores :
              Keystores are used to store keyfiles .
@@ -26,6 +28,12 @@ Keystores :
                                         More secure ans recommended.
   
                          2.Light :  light needs 4MB memory and 100 millisecond processing on a modern CPU to access a key
+
+         
+
+Credentail generation :         1.Create a random private key (64 (hex) characters / 256 bits / 32 bytes)
+                                2.Derive the public key from this private key (128 (hex) characters / 512 bits / 64 bytes)
+                                3.Derive the address from this public key's hash. (40 (hex) characters / 160 bits / 20 bytes)
 
 
 Ethereum account cointains :
@@ -54,7 +62,7 @@ Ethereum account cointains :
 
 Ethereum transaction contains:       Receipt of transaction
                                      Amount of Wei
-                                     Signature of sender authorizing it
+                                     Signature of sender authorizing it : signing happens with private key and hash of data to be signed.
                                      Message
                                      START GAS   ---    max computatinal steps the transaction is allowed.                                         
                                      Gas price   ---    fee the sender pays per computational step                                        
@@ -282,7 +290,6 @@ Uncles in Ethereum :
 [ 7 ] The reason why providing high fuel can lead to a transaction taking longer to get mined is discussed in the section Potential delays with high startGas.
 
 
-
      ====================== Receipts =============
    
      contain hash of final state
@@ -406,5 +413,7 @@ PBFT (Practical byzentine fault tolerance) :
 
    
    
-                          
+      In general how a verification thru signature can happen of particular data :
+   
+      If you have signature and data and public key of sender then you can verify that the msg is correct with these parameters.
                                                                           
