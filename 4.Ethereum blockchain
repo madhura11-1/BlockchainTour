@@ -276,7 +276,14 @@ Uncles in Ethereum :
      8.Gas Limit is the maximum amount of Gas that can be used per block, it is considered the maximum computational load, transaction volume, or block size of a block, and miners can slowly change this value over time.
      9.Gas Fee is effectively the amount of Gas needed to be paid to run a particular transaction or program (called a contract). The Gas Fees of a block can be used to imply the computational load, transaction volume, or size of a block. The gas fees are paid to the miners (or bonded contractors in PoS).
 
-
+  
+    🔴️ Negative GAs Concept : 
+  
+          1. Whenever a user wants to clear the contract storage or want to delete the contract a negative gas concept is used.
+          2. Where in for ever contract clearing user gets 24000 gas refund and for storgae clearing user gets 15000 gas refund.
+          3. Such transactions are kept in refund counter.
+          4. But the total maximum refund can only be half of the gas provided.
+          5. Eg: you provide 60000 gas and two contract deletion so total is 48000 refund but still you get 30,000 only due to criteria 
 
 
 [ 1 ] A transaction with too little fuel will not even reach miners, regardless of the fee supplied.
@@ -413,7 +420,11 @@ PBFT (Practical byzentine fault tolerance) :
 
    
    
+ 🔴️ Transaction Signing : 
       In general how a verification thru signature can happen of particular data :
    
-      If you have signature and data and public key of sender then you can verify that the msg is correct with these parameters.
+      SO When you want to verify if an address 'x' has signed msg 'y' or not, you just need .recover(y) function of webjs which returns an address and just check if 'x' == address returned.
+      The signed msg of the transaction contains v,r,s. These are used to get the public key of sender of transaction
+       
+  
                                                                           
